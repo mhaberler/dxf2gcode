@@ -553,7 +553,7 @@ class Shape(object):
 
     def join_colinear_lines(self):
         """
-        This function is called to search for colinear connected lines an joins 
+        This function is called to search for colinear connected lines an joins
         them if there are any
         """
         # Do only if more then 2 geometies
@@ -601,8 +601,6 @@ class Geos(list):
     def abs_iter(self):
         for geo in list.__iter__(self):
             yield geo.abs_geo if geo.abs_geo else geo
-        else:
-            raise StopIteration()
 
     def abs_el(self, element):
         return self[element].abs_geo if self[element].abs_geo else self[element]
